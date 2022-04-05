@@ -1,0 +1,26 @@
+﻿@using Microsoft.WindowsAzure.Storage
+@using Microsoft.WindowsAzure.Storage.Auth
+@using Microsoft.WindowsAzure.Storage.Blob
+@using Azure.Storage.Blobs;
+@using Azure.Storage.Blobs.Models;
+@using System;
+@using System.IO;
+@using System.Threading.Tasks;
+@using paperplusBlobStorageTest.Controllers
+@using paperplusBlobStorageTest.Interface
+@using paperplusBlobStorageTest.Models
+@model List<FileViewModel>
+
+@{
+    ViewBag.Title = "GetFileList";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@foreach (var item in Model)
+{
+    <p>@item.FileName , @item.FileSize</p>
+                     
+}

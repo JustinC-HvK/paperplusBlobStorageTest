@@ -1,0 +1,10 @@
+﻿@model List<paperplusBlobStorageTest.Models.FolderDirectoryModel>
+
+@{
+    ViewBag.Title = "GetFolder";
+}
+
+@foreach (var item in Model)
+{
+    <p>@item.FolderName</p>
+}
